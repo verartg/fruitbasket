@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Button = ({ type, className, children, clickHandler }) => {
+function Button({ clickHandler, children, type, disabled }) {
     return (
         <button
-            type={ type }
-            className={ className }
-            onClick={ clickHandler }
+            onClick={clickHandler}
+            type={type}
+            disabled={disabled || false}
         >
-            { children }
+            {children}
         </button>
     );
-};
+}
 
 export default Button;
